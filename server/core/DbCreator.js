@@ -133,11 +133,9 @@ class DbCreator {
                 if (inpxFilter.excludeLangSet) {
                     if (inpxFilter.excludeLangSet.has(a)) {
                         excluded = true;
-                        break;
                     }
                 }
 
-                log(`  rec ${rec.lang}`);
                 return recFilter(rec)
                     && (!inpxFilter.includeSet || inpxFilter.includeSet.has(author))
                     && (!inpxFilter.includeLangSet || inpxFilter.includeLangSet.has(lang))
