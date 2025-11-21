@@ -112,6 +112,7 @@ class DbCreator {
                     }
                 }
 
+                log(`  rec ${rec.lang}`);
                 return recFilter(rec)
                     && (!inpxFilter.includeSet || inpxFilter.includeSet.has(author))
                     && !excluded
