@@ -5,6 +5,7 @@ const InpxHashCreator = require('./InpxHashCreator');
 const utils = require('./utils');
 
 const emptyFieldValue = '?';
+const log = new (require('./DbCreator'))().log;
 
 class DbCreator {
     constructor(config) {
