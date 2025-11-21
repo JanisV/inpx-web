@@ -18,7 +18,7 @@ FROM alpine:latest
 
 # Move to /dist directory as the place for resulting binary folder
 WORKDIR /app
-RUN apk add libgcc libstdc++ gcompat curl
+RUN apk update && apk add --no-interactive libgcc libstdc++ gcompat curl zip && apk cache clean
 RUN mkdir -m 0777 data
 COPY docker_entrypoint.sh entrypoint.sh
 COPY --from=build /app/dist/linux/inpx-web .
