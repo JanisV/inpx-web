@@ -25,6 +25,4 @@ COPY --from=build /app/dist/linux/inpx-web .
 
 EXPOSE 12380
 
-HEALTHCHECK CMD curl --fail http://localhost:12380 || exit 1
-
 ENTRYPOINT [ "/app/entrypoint.sh" ]
