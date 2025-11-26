@@ -24,6 +24,6 @@ COPY docker_entrypoint.sh entrypoint.sh
 COPY --from=build /app/dist/linux/inpx-web .
 
 EXPOSE 12380
-VOLUME [ "/app/data" ]
+VOLUME [ "/app/data"  ]
 
 ENTRYPOINT [ "/app/entrypoint.sh" ]
